@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo">Portfolio</a>
+        <i class='bx bx-menu' id="menu-icon"></i>
+        <nav class="navbar">
+            <a href="home" >Home</a>
+            <a href="about" >About</a>
+            <a href="services">Services</a>
+            <a href="portfolio">Portfolio</a>
+            <a href="contact"class="active">Contact</a>
+
+        </nav>
+    </header>
+    <section class="contact" id="contact">
+        <h2 class="heading">Contact <span>Me!</span></h2>
+        <form #contactForm="ngForm">
+            <div class="input-box">
+              <input type="text" placeholder="Full Name" name="fullName" [(ngModel)]="fullName">
+              <input type="email" placeholder="Email Address" name="emailAddress" [(ngModel)]="emailAddress">
+            </div>
+            <div class="input-box">
+              <input type="number" placeholder="Mobile Number" name="mobileNumber" [(ngModel)]="mobileNumber">
+              <input type="text" placeholder="Email Subject" name="emailSubject" [(ngModel)]="emailSubject">
+            </div>
+            <textarea name="message" id="" cols="" rows="10" placeholder="Your Message" [(ngModel)]="message"></textarea>
+            <input type="submit" value="Send Message" class="btn" (click)="sendEmail(contactForm)">
+          </form>
+          
+        
+    
+    
+    </section>
+</body>
+</html>
